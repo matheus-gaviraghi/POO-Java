@@ -1,0 +1,63 @@
+Exercicio 4.4:
+- O construtor de uma classe deve ser público para ter acesso à própria classe
+- para a classe Data ser visível externamente, deveria colocar o public class
+
+
+Exercicio 4.5:
+- Linha 6: o construtor deveria ser chamado com um this
+
+
+Exercicio 4.6:
+int soma (int x, int y) vs float soma (int x, int y) 
+- Isso aqui não funciona, pois não é possível diferenciar os metodos
+- Se for assim funciona: int soma (int x, int y) vs float soma (float x, int y)
+
+Por ter os mesmos parametros, esse codigo do exercicio nao é compilado
+
+
+Exercicio 4.7:
+Linha 7:  tenho que colocar o this
+- O construtor a gente sempre chama após chamar o metodo, entao a linha 7 deveria vir antes da 8
+
+
+Exercicio 4.8:
+- 2 metodos com mesma assinatura (mesmos parametros)
+- Por definicao construtor nao retorna nada, só executa as operações, entao os returns estao errados
+
+
+Exercicio 4.17:
+
+
+
+Exercicio 4.18:
+1 metodo A
+2 metodo A
+3 metodo A
+4 metodo A
+5 metodo B
+
+
+========== CAMPOS E MÉTODOS ESTÁTICOS =========
+- Tenho 1 metodo que quero compartilhar pra toda classe, e não individual para cada objeto
+- Vale para todos os objetos
+- Ex: so tenho 1 main
+
+- Mesma ideia de uma variavel global em C: quero que todos possam acessar
+- o static é o que permite o compartilhamento de informações entre os objetos
+- Todos vao enxergar o mesmo numero sempre (Ex: SimuladorCaixaDeBanco2)
+- Coloco static entre o modificador de acesso e o tipo da variavel
+
+Constantes de classe: 
+    static: unico, todos tem acesso, modificavel
+    final: constante, nao modificavel
+
+- Exemplo DemoConstantesMatematicas: 
+    Linha 13 (a que tenho apenas a classe sendo chamada, sem um objeto em si -> c1.raizDe5 == ConstantesMatematicas.raizDe5): por ser unico, posso usar a classe dentro de outro codigo sem precisar instanciar a classe
+
+Métodos Estáticos:
+- quero ter um metodo unico para todos os meus objetos
+- todos os atributos internos desse metodo devem ser estaticos
+- Exemplo CalculoDePrecoDeTerreno: double preco é estatico e unico
+- tudo que for criado dentro de um contexto estatico se torna estatico
+- se quiser chamar um metodo que nao é estatico dentro de uma mesma classe onde o metodo que requer é estatio, nao funciona. Ex: se eu tirar o static do metodo precoDoTerreno, na main vai dar problema
+- agora se eu tiver uma outra classe que realize este calculo, e lá nao foi definido como estatico, mas eu chamo na main essa classe, automaticamente o metodo e atributos vao se tornar estaticos, e vai funcionar direitinho
