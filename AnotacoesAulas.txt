@@ -61,3 +61,7 @@ Métodos Estáticos:
 - tudo que for criado dentro de um contexto estatico se torna estatico
 - se quiser chamar um metodo que nao é estatico dentro de uma mesma classe onde o metodo que requer é estatio, nao funciona. Ex: se eu tirar o static do metodo precoDoTerreno, na main vai dar problema
 - agora se eu tiver uma outra classe que realize este calculo, e lá nao foi definido como estatico, mas eu chamo na main essa classe, automaticamente o metodo e atributos vao se tornar estaticos, e vai funcionar direitinho
+
+SOMENTE MÉTODOS E ATRIBUTOS PODEMOS DECLARAR COMO ESTÁTICOS
+- O construtor não pode ser estatico, visto que este é executado ao chamar a classe
+- O construtor não faz sentido quando tenho todos atributos e metodos estaticos, uma vez que não preciso instaciar um novo objeto.
