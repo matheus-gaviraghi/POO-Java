@@ -1,3 +1,4 @@
+package Aula3009.CalculoDePrecoDeTerreno;
 
 public class CalculoDePrecoDeTerreno {
 	
@@ -5,17 +6,16 @@ public class CalculoDePrecoDeTerreno {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		double preco;
-		System.out.print("O preço do terreno N1 é ");
+		System.out.print("O pre√ßo do terreno N1 √© ");
 		preco = precoDoTerreno(450, 1);
 		System.out.println(preco);
 
-		System.out.print("O preço do terreno Q1 é ");
+		System.out.print("O pre√ßo do terreno Q1 √© ");
 		preco = CalculoDePrecoDeTerreno.precoDoTerreno(475, 4);
 		System.out.println(preco);
 
-		System.out.print("O preço do terreno F3 é ");
+		System.out.print("O pre√ßo do terreno F3 √© ");
 		System.out.println(precoDoTerreno(525, 2));  		// Uso de this?
 
 	}

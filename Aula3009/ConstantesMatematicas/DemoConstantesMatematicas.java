@@ -1,6 +1,4 @@
-
 public class DemoConstantesMatematicas {
-
 	/**
 	 * @param args
 	 */

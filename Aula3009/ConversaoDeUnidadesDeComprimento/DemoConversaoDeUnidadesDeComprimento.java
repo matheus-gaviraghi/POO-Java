@@ -1,3 +1,4 @@
+package Aula3009.ConversaoDeUnidadesDeComprimento;
 
 public class DemoConversaoDeUnidadesDeComprimento {
 
@@ -7,13 +8,14 @@ public class DemoConversaoDeUnidadesDeComprimento {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ConversaoDeUnidadesDeComprimento conv = new ConversaoDeUnidadesDeComprimento();
-		System.out.println("20 pés são " + 
+		System.out.println("20 p√©s s√£o " + 
 				conv.pesParaCentimetros(20) + " em cm!");
-		System.out.println("5 polegadas são " + 
+		System.out.println("5 polegadas s√£o " + 
 				conv.polegadasParaCentimetros(5) + " em cm!");
-		System.out.println("20 pés são " + 
+		System.out.println("\nUsando m√©todos est√°ticos sem instanciar objetos");
+		System.out.println("20 p√©s s√£o " + 
 				ConversaoDeUnidadesDeComprimento.pesParaCentimetros(20) + " em cm!");
-		System.out.println("5 polegadas são " + 
+		System.out.println("5 polegadas s√£o " + 
 				ConversaoDeUnidadesDeComprimento.polegadasParaCentimetros(5) + " em cm!");
 	}
 
