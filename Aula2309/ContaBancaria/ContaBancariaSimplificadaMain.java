@@ -1,5 +1,4 @@
-package codigos.Aula2309;
-
+package Aula2309.ContaBancaria;
 
 public class ContaBancariaSimplificadaMain {
 
@@ -7,7 +6,7 @@ public class ContaBancariaSimplificadaMain {
 		ContaBancariaSimplificada c1;
 		c1 = new ContaBancariaSimplificada();
 		c1.abreContaSimples("Nome Teste 1");
-		c1.abreConta("Nome Teste 2", 1000, true);
+		// c1.abreConta("Nome Teste 2", 1000, true);
 		c1.deposita(1000);
 		c1.retira(500);
 		c1.mostrarDados();

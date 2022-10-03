@@ -1,4 +1,4 @@
-package codigos.Aula1609;
+package Aula1609;
 
 public class LampadaMain {
     public static void main(String args[]) {

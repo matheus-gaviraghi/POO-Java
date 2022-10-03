@@ -1,4 +1,4 @@
-package codigos.Aula2309;
+package Aula2309.ContaBancaria;
 
 public class ContaBancariaSimplificada {
 
