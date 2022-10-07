@@ -1,4 +1,4 @@
-package listaExercicios.cap5_Ex3;
+package listaExercicios.cap5.cap5_Ex3;
 
 public class DemoDataComFabricaModificado {
     /**

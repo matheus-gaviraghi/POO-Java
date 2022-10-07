@@ -1,4 +1,4 @@
-package listaExercicios.cap5_Ex2;
+package listaExercicios.cap5.cap5_Ex2;
 // Escreva,para a classe DataComFabrica,um método sete De Setembro que se
 // comporte como uma fábrica de instâncias.
 public class DataComFabricaModificado {

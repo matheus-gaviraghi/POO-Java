@@ -1,4 +1,4 @@
-package listaExercicios.cap5_Ex6;
+package listaExercicios.cap5.cap5_Ex6;
 
 public class DemoConversaoDeUnidadesDeArea {
 

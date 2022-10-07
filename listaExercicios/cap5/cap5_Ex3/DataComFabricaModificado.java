@@ -1,4 +1,4 @@
-package listaExercicios.cap5_Ex3;
+package listaExercicios.cap5.cap5_Ex3;
 /*Escreva, para a classe DataComFabrica, um método primeiroDoMês que se comporte como
 uma fábrica de instâncias. */
 public class DataComFabricaModificado {

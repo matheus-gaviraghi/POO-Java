@@ -1,4 +1,4 @@
-package listaExercicios.cap5_Ex7;
+package listaExercicios.cap5.cap5_Ex7;
 
 import java.util.Scanner;
 

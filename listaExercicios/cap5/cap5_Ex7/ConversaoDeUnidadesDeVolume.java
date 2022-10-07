@@ -1,4 +1,4 @@
-package listaExercicios.cap5_Ex7;
+package listaExercicios.cap5.cap5_Ex7;
 
 public class ConversaoDeUnidadesDeVolume {
     // 1 litro = 1000 centímetros cúbicos

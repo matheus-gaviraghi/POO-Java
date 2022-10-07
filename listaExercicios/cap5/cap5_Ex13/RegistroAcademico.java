@@ -1,4 +1,4 @@
-package listaExercicios.cap5_Ex13;
+package listaExercicios.cap5.cap5_Ex13;
 
 /*Escreva uma versão da classe RegistroAcademico que tenha o campo númeroDeMatrícula declarado
 como static, e que incremente o valor desse campo cada vez que uma instância da classe 

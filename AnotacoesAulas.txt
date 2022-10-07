@@ -65,3 +65,37 @@ Métodos Estáticos:
 SOMENTE MÉTODOS E ATRIBUTOS PODEMOS DECLARAR COMO ESTÁTICOS
 - O construtor não pode ser estatico, visto que este é executado ao chamar a classe
 - O construtor não faz sentido quando tenho todos atributos e metodos estaticos, uma vez que não preciso instaciar um novo objeto.
+
+- O que muda um metodo (assinatura) é o seu nome e seus parametros (tipo e quantidade), não o tipo do return (Exercicio 5.12)
+
+
+AULA 07/10
+Construtores - NAO RETORNAM, o proprio sistema constroi o retorno, a gente nao deve tentar
+especificar um retorno
+
+Dentro de um mesmo escopo, se tiver 2 variaveis com mesmo nome, tenho que usar o this para referenciar ao atributo do objeto.
+    Data(int mes, int dia, int ano){
+        this.mes = mes;
+        this.dia = dia;
+        this.ano = ano;
+    }
+
+Reutilização de Código:
+- Add informação em classes ja existentes (atributos e métodos) para reutilizar essas classes.
+- 2 formas de reutilização: delegação (ou composição) e herança.
+    Delegação: utilizo objetos com base em classes que ja foram criadas (crio objetos) - o que estavamos fazendo até agora
+        - Na delegação, inicializo no construtor os objetos que sao reutilizados
+        - Os modificadores de acesso são mantidos (as regras de acesso são mantidas)
+        Slide ?OU?: nao conseguimos modificar o valor de k em nenhuma das opções, pois x1 é privado, teria de ser *publico* ou protegido
+        OBS: o protegido funciona como se fosse publico dentro de um mesmo diretorio, mas nao deixa que outros diretorios acessem
+    Herança: herdar informações e add novas informações as classes
+        - palavra-chave: extends
+        Ex: class PacienteDeClinica extends Pessoa{...} -> Paciente tem as caracteristicas de Pessoa
+        - se tiver private no pai, não adianta tentar acessar no filho, não consegue! Tem que ser protegido.
+        - SÓ 1 PAI, para ter mais temos que usar Interface (herança multipla)
+        - Ocultação: redeclaração de um campo/atributo do pai no filho
+        - super: aponta pro objeto pai
+        - this: aponta pro proprio objeto
+        SEMPRE: primeiro cria objeto pai e depois trabalha com atributos
+        - super. : especifico o atributo ou metodo do pai que quero trabalhar
+        - super.super: NÃO DÁ

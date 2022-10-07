@@ -1,4 +1,4 @@
-package listaExercicios.cap5_Ex13;
+package listaExercicios.cap5.cap5_Ex13;
 
 public class Data {
   int dia, mes, ano;
