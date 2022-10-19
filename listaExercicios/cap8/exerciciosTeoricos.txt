@@ -1,0 +1,7 @@
+# 8.2:
+
+Variáveis x e y são declaradas como private na classe Ponto2D, com isso não podem ser acessadas na classe Ponto3D
+
+# 8.3:
+
+

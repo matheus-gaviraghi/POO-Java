@@ -99,3 +99,69 @@ Reutilização de Código:
         SEMPRE: primeiro cria objeto pai e depois trabalha com atributos
         - super. : especifico o atributo ou metodo do pai que quero trabalhar
         - super.super: NÃO DÁ
+
+
+
+
+### DUVIDAS
+ - Exemplo RegistroAcademicoDeGraduacao:
+    -> o que você quer dizer por serem referenciados?
+    -> nao seria somente pelo fato de que aluno1 ja tem um local de memoria e estamos apenas sobreescrevendo ele?
+
+    // Palavra-chave final indica que esse metodo nao pode ser sobreposto por outros metodos de mesma
+	// assinatura em classes filhas (herdeiras)
+	public final float qualSalario() {
+		return salario;
+	}
+    // como assim nao pode ser sobreposto?
+    Não podemos sobrepor um metodo final da classe pai em um classe filha, o que pode ser feito é implementar um novo método com assinatura distinta e chamar o metodo da outra usando o super
+    Ex: Automovel tem o metodo quantoCusta(), aí la no AutomovelBasico tenho um quantoCusta novamente como final. Se tivesse la no Automovel o metodo como sendo final, no AutomovelBasico poderia criar um metodo quantoCusta(int x){super.quantoCusta(...) e usar x aqui dentro}
+
+
+    // por que em alguns códigos é pedido para inserir o package e outros nao precisa? Ex: ModificadoresAcesso x ChefeDeDepartamento
+
+    // Métodos herdados não podem acessar campos declarados em subclasses.  
+    // Seria porque igual eles nao teriam utilidade? uma vez que na declaração do metodo na classe super esses atributos nem existem?
+
+    // Métodos do tipo final podem ser herdados, mas não podem ser sobrepostos -> somente atributos, certo?
+
+# ANOTAÇÕES AULA 14/10
+- final Class:  nao preciso declarar os metodos todos como final, eles se tornam "final" porque igual nao posso extender a classe
+- polimorfismo: os objetos filhos, desde que tendo o mesmo pai, podem se "passar" como o pai, ou seja, apresentam as mesmas caracteristicas
+    Ex: lista de pessoas, dentro dessa lista posso ter o funcionario q é uma pessoa, assim como tenho 2 tipos de automoveis que podem ser configuradas como "Automovel"
+ 
+- Interface de automovel: (tudo que é visivel)
+    - atributos são visiveis (movido...)
+    - modelo, cor
+    - metodos: quantoCusta, quantasPrestacoes, testeAutomovel, toString
+
+    quem tiver uma referencia de automovel vai conseguir acessar esses atributos e executar esses metodos
+
+- Classes Abstratas e Interfaces
+    - metodo do tipo abstrato: quem é filho por obrigação tem que reimplementar o metodo em particular
+    - interface em java só tem metodos, nao tem atributos. Ex de uso: interface grafica (click do mouse)
+    - posso ter classe abstrata sem metodos abstratos, mas tendo metodos abstratos transformo a classe como abstrata
+    - nao consigo executar um metodo abstrato: ela precisa ser reimplementada por seus filhos
+    - metodo abstrato nao precisa de corpo, porque ele precisa ser implementado por seus filhos
+    - classe abstrata: tenho um ou mais metodos abstratos
+    
+    - interface: MÉTODOS não implementados que desejamos que sejam implementados
+    - só temos definição, nao implementação, só metodos, nao tenho atributo
+    - "implements" é a palavra chave para o uso de Interfaces
+    - posso ter varias implementações de interfaces ao mesmo tempo, mas apenas 1 extensao para 1 classe
+    ex: class Circulo extends Shape implements interfaceA, interfaceB, interfaceC{}
+    todos os metodos abstratos devem ser implementados dentro desta classe, se nao implementar o interfaceA nao funciona, por Exemplo
+    - toda interface é publica, nem preciso colocar como public e abstract
+    ex: objetoGeometrico: circulo polimorfismo, pois se torna um objeto do tipo objetoGeometrico
+
+
+    # AULA 17/10/2022
+    - COLEÇÕES:
+        - forma generica para conseguir usar estrutura de dados: poder usar arvores, pilhas, etc
+        - são conjuntos de diferentes interfaces para acessar as coleções: o metodo da lista é diferente do metodo de um conjunto, logo 
+        para acessar os diferentes tipos de estruturas temos que ter diferentes metodos para acessar eles
+        - interface: permite o acesso aos metodos para trabalhar com as estruturas desejadas
+        Ex: List <T> Teste = new LinkedList<T>(); onde T é o tipo de informação que queremos colocar (classe)
+            Tenho os metodos de acesso de uma lista usando a interface List
+        - Polimorfismo: Pessoa Y é um tipo de pessoa X, enquanto Pessoa X não é um tipo de Pessoa Y
+        
