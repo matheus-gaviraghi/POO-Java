@@ -13,7 +13,7 @@ public class Data {
             ano = a;
             dia = d;
             mes = m;
-            System.out.println("Data válida e setada: " + d + "/" + m + "/" + a);
+            System.out.println("Data válida e setada: " + dia + "/" + mes + "/" + ano);
         }
         else System.out.println("Data inválida!");
         

@@ -6,6 +6,18 @@ Exercicio 4.4:
 Exercicio 4.5:
 - Linha 6: o construtor deveria ser chamado com um this
 
+class Ponto2D {
+    private double x,y;
+    Ponto2D() {
+    // Ponto2D(0.0,0.0); ERRADO
+    this(0.0,0.0); // CORRETO
+    }
+
+    Ponto2D(double coord1,double coord2){
+        x = coord1; y = coord2;
+    }
+} // fim da classe
+
 
 Exercicio 4.6:
 int soma (int x, int y) vs float soma (int x, int y) 
@@ -16,17 +28,15 @@ Por ter os mesmos parametros, esse codigo do exercicio nao é compilado
 
 
 Exercicio 4.7:
-Linha 7:  tenho que colocar o this
-- O construtor a gente sempre chama após chamar o metodo, entao a linha 7 deveria vir antes da 8
+- Linha 7:  tenho que colocar o this(0,0) ao invés de DemoConstrutor(0,0) 
+- A chamada do construtor deve ser a primeira ação a ser desempenhada, então a 
+linha 7 deveria vir antes do que a linha 6 
 
 
 Exercicio 4.8:
 - 2 metodos com mesma assinatura (mesmos parametros)
-- Por definicao construtor nao retorna nada, só executa as operações, entao os returns estao errados
-
-
-Exercicio 4.17:
-
+- Por definicao construtor nao retorna nada, só executa as operações,
+entao os returns estao errados
 
 
 Exercicio 4.18:
@@ -35,6 +45,11 @@ Exercicio 4.18:
 3 metodo A
 4 metodo A
 5 metodo B
+6 metodo B
+7 metodo C
+8 metodo A
+9 metodo A
+10 metodo C
 
 
 ========== CAMPOS E MÉTODOS ESTÁTICOS =========
@@ -59,7 +74,7 @@ Métodos Estáticos:
 - todos os atributos internos desse metodo devem ser estaticos
 - Exemplo CalculoDePrecoDeTerreno: double preco é estatico e unico
 - tudo que for criado dentro de um contexto estatico se torna estatico
-- se quiser chamar um metodo que nao é estatico dentro de uma mesma classe onde o metodo que requer é estatio, nao funciona. Ex: se eu tirar o static do metodo precoDoTerreno, na main vai dar problema
+- se quiser chamar um metodo que nao é estatico dentro de uma mesma classe onde o metodo que requer é estatico, nao funciona. Ex: se eu tirar o static do metodo precoDoTerreno, na main vai dar problema
 - agora se eu tiver uma outra classe que realize este calculo, e lá nao foi definido como estatico, mas eu chamo na main essa classe, automaticamente o metodo e atributos vao se tornar estaticos, e vai funcionar direitinho
 
 SOMENTE MÉTODOS E ATRIBUTOS PODEMOS DECLARAR COMO ESTÁTICOS
@@ -88,9 +103,10 @@ Reutilização de Código:
         - Os modificadores de acesso são mantidos (as regras de acesso são mantidas)
         Slide ?OU?: nao conseguimos modificar o valor de k em nenhuma das opções, pois x1 é privado, teria de ser *publico* ou protegido
         OBS: o protegido funciona como se fosse publico dentro de um mesmo diretorio, mas nao deixa que outros diretorios acessem
+    
     Herança: herdar informações e add novas informações as classes
         - palavra-chave: extends
-        Ex: class PacienteDeClinica extends Pessoa{...} -> Paciente tem as caracteristicas de Pessoa
+        Ex: class PacienteDeClinica extends Pessoa{...} -> PacienteDeClinica tem as caracteristicas de Pessoa
         - se tiver private no pai, não adianta tentar acessar no filho, não consegue! Tem que ser protegido.
         - SÓ 1 PAI, para ter mais temos que usar Interface (herança multipla)
         - Ocultação: redeclaração de um campo/atributo do pai no filho
@@ -164,4 +180,9 @@ Reutilização de Código:
         Ex: List <T> Teste = new LinkedList<T>(); onde T é o tipo de informação que queremos colocar (classe)
             Tenho os metodos de acesso de uma lista usando a interface List
         - Polimorfismo: Pessoa Y é um tipo de pessoa X, enquanto Pessoa X não é um tipo de Pessoa Y
+
+
+    # AULA 24/10/2022
+    - PROGRAMAÇÃO VISUAL
+        2 principais bibliotecas graficas estão na maquina virtual: java.awt (classes básicas) e javax.swing (mesmas implementações, mas com algumas melhorias)
         

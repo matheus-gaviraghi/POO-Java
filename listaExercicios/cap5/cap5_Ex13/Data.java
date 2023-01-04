@@ -5,9 +5,15 @@ public class Data {
 
   //  public void inicializaData(int d, int m, int a) {
   public Data(int d, int m, int a) {
-    dia = d;
-    mes = m;
-    ano = a;
+    if(dataEValida(d, m, a)){
+      dia = d;
+      mes = m;
+      ano = a;
+    } else{
+      dia = 0;
+      mes = 0;
+      ano = 0;
+    }
   }
 
   public boolean dataEValida(int d, int m, int a) {

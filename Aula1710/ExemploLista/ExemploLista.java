@@ -13,18 +13,18 @@ public class ExemploLista {
 		// Essa lista é definida para lidar com elementos da classe PessoaX (assim como suas classes filhas)
 		java.util.List<PessoaX> lista = new LinkedList<PessoaX>();
 		
-		// Utilizando m�todo da cole��o (add) para adicionar objetos do tipo PessoaX e PessoaY
+		// Utilizando método da coleção (add) para adicionar objetos do tipo PessoaX e PessoaY
 		lista.add(a);
 		lista.add(b);
 		lista.add(c);
 		lista.add(d);
 		
-		// Utiliza m�todo size() para obter a quantidade de elementos da lista
+		// Utiliza método size() para obter a quantidade de elementos da lista
 		System.out.println("Tamanho de elementos na lista: " + lista.size());
 		
-		// Utiliza m�todo contains() para verificar se o objeto a existe ou n�o
+		// Utiliza método contains() para verificar se o objeto a existe ou não
 		if (lista.contains(a)) {
-			System.out.println("Cont�m Elemento: " + a);
+			System.out.println("Contém Elemento: " + a);
 		}
 		
 		// Utiliza iterador para imprimir todos os elementos da lista
@@ -33,7 +33,7 @@ public class ExemploLista {
 			System.out.print("Lista: " + t);
 		}
 		
-		// Utiliza m�todo para remove() para remover elemento da lista 
+		// Utiliza método para remove() para remover elemento da lista 
 		lista.remove(a);
 		
 		// Utiliza iterador para imprimir todos os elementos da lista
@@ -42,7 +42,7 @@ public class ExemploLista {
 			PessoaX t = it.next();
 			System.out.print("Lista: " + t);
 		}
-		// Utiliza m�todo size() para obter a quantidade de elementos da lista
+		// Utiliza método size() para obter a quantidade de elementos da lista
 		System.out.println("Tamanho de elementos na lista: " + lista.size());		
 	}
 }

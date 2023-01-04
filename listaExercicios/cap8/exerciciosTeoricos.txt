@@ -1,7 +1,10 @@
 # 8.2:
 
-Variáveis x e y são declaradas como private na classe Ponto2D, com isso não podem ser acessadas na classe Ponto3D
+- Variáveis x e y são declaradas como private na classe Ponto2D, 
+com isso não podem ser acessadas na classe Ponto3D
 
 # 8.3:
 
+- Só é possivel fazer o extend de uma classe ancestral (unico pai), 
+e nesse caso está sendo chamada 2 classes
 
